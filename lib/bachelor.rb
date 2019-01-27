@@ -1,5 +1,12 @@
+require 'pry'
+
 def get_first_name_of_season_winner(data, season)
-  # code here
+       data[season].each do |info_hash|
+         if info_hash["status"] == "Winner"
+            return info_hash["name"].split(" ")[0]
+         end
+       end
+           
 end
 
 def get_contestant_name(data, occupation)
