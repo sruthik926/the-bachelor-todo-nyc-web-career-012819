@@ -48,6 +48,6 @@ def get_average_age_for_season(data, season)
          sum_age += info_hash["age"].to_i
          total_conte += 1
       end
-      sum_age.to_f
+      (sum_age.to_f/total_conte).round
       binding.pry
 end
